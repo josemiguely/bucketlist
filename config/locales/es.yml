@@ -1,0 +1,5 @@
+en:
+  hello: "Hola mundo"
+  buckets:
+    index:
+      title: "Tus buckets"
