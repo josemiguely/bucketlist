@@ -1,11 +1,18 @@
 <%= image_tag @bucket.featured_image if @bucket.featured_image.attached? %>
 <% cache @bucket do %>
 <h1><%= @bucket.title %></h1>
-<% end %>
-
 <div>
     <p><%= @bucket.description %></p>
 </div>
+<% end %>
+
+<div>
+    <%= form_with model: [product, Subscriber.new] do |form| %>
+        <%= form.email_field :email, placeholder: "you@example.com", required: true %>
+        <%= form.submit "Submit" %>
+    <% end %>
+</div>
+
 <%= link_to "Edit bucket", edit_bucket_path(@bucket)%>
 <%= link_to "All buckets", buckets_path%>
 <%= button_to "Delete", @bucket, method: :delete, data: { turbo_confirm: "Are you sure?" } %>
