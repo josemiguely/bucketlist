@@ -2,6 +2,6 @@
 <h1>Your Buckets</h1>
 <div>
     <% @buckets.each do |bucket| %>
-        <%= bucket.title %>
+        <p><%= link_to bucket.title, bucket %></p>
     <% end %>
 </div>
