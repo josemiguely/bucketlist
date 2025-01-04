@@ -2,3 +2,5 @@ Felicidades
 
 Tu <%= @bucket.title %> ha sido commpletado en la siguiente fecha: <%= @bucket.updated_at %>.
 <%= bucket_url(@bucket) %>
+
+Unsubscribe: <%= unsubscribe_url(token: params[:subscriber].generate_token_for(:unsubscribe)) %>
