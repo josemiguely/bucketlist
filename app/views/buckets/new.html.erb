@@ -1,0 +1,17 @@
+<h1>Nuevo Bucket</h1>
+
+<%= form_with model: @bucket do |form| %>
+    <div>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </div>
+    <div>
+        <%= form.label :description %>
+        <%= form.text_field :description %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+
+<% end %>
