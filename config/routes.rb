@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resource :session
+  resources :passwords, param: :token
   #TODO: Later specify specific crud routes used
   resources :buckets
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
