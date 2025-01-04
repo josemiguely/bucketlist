@@ -1,5 +1,5 @@
 class BucketsController < ApplicationController
-  before_action :set_bucket, only: %i[ show edit update]
+  before_action :set_bucket, only: %i[ show edit update destroy]
 
   def index
     @buckets = Bucket.all
@@ -32,6 +32,10 @@ class BucketsController < ApplicationController
     end
   end
 
+  def destroy
+    @bucket.destroy
+    redirect_to buckets_path, notice: "Bucket was succesfully deleted"
+  end
   private
   def set_bucket
     @bucket = Bucket.find(params[:id])
