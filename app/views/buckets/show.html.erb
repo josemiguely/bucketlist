@@ -3,5 +3,5 @@
 <div>
     <p><%= @bucket.description %></p>
 </div>
-
+<%= link_to "Edit bucket", edit_bucket_path(@bucket)%>
 <%= link_to "All buckets", buckets_path%>
