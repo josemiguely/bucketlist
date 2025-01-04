@@ -1,3 +1,4 @@
+<%= image_tag @bucket.featured_image if @bucket.featured_image.attached? %>
 <% cache @bucket do %>
 <h1><%= @bucket.title %></h1>
 <% end %>

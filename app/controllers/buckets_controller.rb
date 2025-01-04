@@ -42,6 +42,6 @@ class BucketsController < ApplicationController
   end
 
   def bucket_params
-    params.expect(bucket: [ :title, :description ])
+    params.expect(bucket: [ :title, :description,  :featured_image ])
   end
 end
